@@ -293,6 +293,103 @@
     .line.short { width: 56%; }
     .line.mid { width: 78%; }
     .formula { margin-top: auto; font-family: var(--mono); font-size: 18px; }
+    .corca-block {
+      margin-top: 42px;
+      padding-top: 42px;
+      border-top: 1px solid rgba(0, 0, 0, .1);
+    }
+    .corca-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .corca-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 8px 0 14px;
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+    .corca-mark {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius);
+      display: inline-grid;
+      place-items: center;
+      background: var(--ink);
+      color: white;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -.04em;
+      flex: 0 0 auto;
+    }
+    .corca-title small {
+      font-size: .72em;
+      font-weight: 520;
+      opacity: .55;
+      letter-spacing: -.025em;
+    }
+    .corca-desc {
+      max-width: 590px;
+      margin: 0;
+      color: #2f2f2f;
+      font-size: 17px;
+      line-height: 1.65;
+      font-weight: 500;
+    }
+    .press-kicker {
+      margin-bottom: 12px;
+      color: #777;
+    }
+    .press-list {
+      display: grid;
+      gap: 8px;
+    }
+    .press-item {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: center;
+      min-height: 58px;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, .58);
+      border: 1px solid rgba(0, 0, 0, .05);
+      border-radius: var(--radius);
+      transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+    .press-item:hover {
+      transform: translateX(3px);
+      background: white;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+    }
+    .press-num {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      color: #777;
+    }
+    .press-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .press-source {
+      font-weight: 800;
+      letter-spacing: -.015em;
+    }
+    .press-link {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      color: #555;
+      white-space: nowrap;
+    }
 
     .case-copy p { color: #424242; font-size: 20px; }
     .photo-card {
@@ -415,7 +512,7 @@
     @media (max-width: 900px) {
       .container { padding: 0 22px; }
       .nav-links { display: none; }
-      .tiles, .persona-grid, .about-grid, .case-grid, .split-grid { grid-template-columns: 1fr; }
+      .tiles, .persona-grid, .about-grid, .corca-grid, .case-grid, .split-grid { grid-template-columns: 1fr; }
       .tile { min-height: 190px; }
       .reward-grid { grid-template-columns: 1fr; }
       .program-step { grid-template-columns: 56px 1fr; }
@@ -549,6 +646,37 @@
               <div class="mock-grid">
                 <div class="mock-panel"><span class="eyebrow">PDF</span><i class="line mid"></i><i class="line"></i><i class="line short"></i><i class="line mid"></i><i class="line"></i><i class="line short"></i></div>
                 <div class="mock-panel"><span class="eyebrow">Summary</span><i class="line"></i><i class="line mid"></i><i class="line short"></i><div class="formula">y = ax² + bx + c</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="corca-block">
+            <div class="corca-grid">
+              <div>
+                <span class="eyebrow">그 노하우를 가지고 오는 팀</span>
+                <h3 class="corca-title">
+                  <span class="corca-mark">C</span>
+                  <span>코르카 <small>CORCA</small></span>
+                </h3>
+                <p class="corca-desc">
+                  문라이트를 만드는 <strong>코르카</strong>는 OpenAI 서비스 파트너로 선정된 AI 전문 팀입니다. 책상에서 듣지 않고 <strong>연구자 옆에서 직접 듣기 위해</strong> 이번 랩실 교류 프로그램을 시작했어요.
+                </p>
+              </div>
+              <div>
+                <div class="eyebrow press-kicker">관련 기사</div>
+                <div class="press-list">
+                  <a class="press-item" href="https://www.etnews.com/20260204000212" target="_blank" rel="noopener">
+                    <span class="press-num">01</span>
+                    <span class="press-text"><span class="press-source">전자신문</span><span class="press-link">기사 보기 ↗</span></span>
+                  </a>
+                  <a class="press-item" href="https://dbr.donga.com/kfocus/view/article_no/38" target="_blank" rel="noopener">
+                    <span class="press-num">02</span>
+                    <span class="press-text"><span class="press-source">DBR · 동아비즈니스리뷰</span><span class="press-link">기사 보기 ↗</span></span>
+                  </a>
+                  <a class="press-item" href="https://www.mk.co.kr/news/it/12024250" target="_blank" rel="noopener">
+                    <span class="press-num">03</span>
+                    <span class="press-text"><span class="press-source">매일경제</span><span class="press-link">기사 보기 ↗</span></span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
